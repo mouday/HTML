@@ -1,0 +1,151 @@
+body{
+    /*body默认有外边距和内边距，需要清除*/
+    margin:0;
+    padding:0;
+    text-align:center;/*早期ie6兼容性，居中显示*/
+}
+/*加塞，控制间隔高度，便于多次使用*/
+.t{
+    float:left;
+    width:100%;
+    height:10px;
+    overflow:hidden;/*解决兼容：ie低于18个像素会按照18像素显示*/
+    clear:both;/*单独一行*/
+}
+#container{
+    /*普通显示器1024*768*/;
+    width:960px;
+    margin:0 auto;
+    text-align:left;/*调整内容居左*/
+}
+#header{
+    /*外层不指定高度*/
+    width:100%;
+}
+#logo{
+    float: left;
+    width:180px;
+    height:100px;
+    margin-right: 10px;
+}
+#banner{
+    float:left;
+    width:600px;
+    height: 100px;
+    background:#ff9966;
+    margin-right:10px;
+
+    color:white;
+    text-align:center;
+    line-height:100px;
+}
+#tool{
+    float:left;
+    width:160px;
+    height:100px;
+    background: #aa3300;
+
+    color:white;
+    text-align:center;
+    line-height:100px;
+}
+#nav{
+    float:left;
+    width:100%;
+    height:30px;
+    background:url(../images/nav.png);
+}
+#content{
+    width:100%;
+    float:left;
+}
+.main{
+    float:left;
+    width:750px;
+}
+.main .left{
+    float:left;
+    width:300px;
+}
+
+.main .right{
+    float:right;
+    width:440px;
+}
+.tit{
+    width:100%;
+    height:26px;
+    background:url(../images/title.png)  right;
+}
+.tit h3{
+    margin:0;
+    padding:0;
+    width:100px;
+    font-size: 14px;
+    text-align:center;
+    line-height:26px;
+    color:#050;
+    background:url(../images/title.png) no-repeat left;
+}
+.cw_1{
+    width:298px !important;
+    widht:300px;
+}
+.cw_2{
+    width:438px !important;
+    widht:440px;
+}
+.con{
+    height:174px;
+    width:100%;
+    border:1px solid #aaa;
+    border-top:0;
+}
+.con ul{
+    margin:0 5px;
+}
+.con li{
+    background:url(../images/dot.png) repeat-x bottom;
+    background-size: 3px 3px;
+}
+.con ul li a{
+    background: url(../images/a.png)  no-repeat left center;
+    background-size:  12px 12px ;
+    padding-left:15px;
+}
+.right .cli li{
+    width:50%;
+    float:left;
+}
+.barside{
+    float:right;
+    width:200px;
+    background: rgb(222,211,140);
+}
+.barside_h1{
+    height:410px;
+}
+.barside_h2{
+    height:620px;
+}
+.ad{
+    float:left;
+    width:100%;
+    height:100px;
+    background:rgb(137,190,178);
+    clear:both;/*独占一行*/
+
+    color:white;
+    text-align:center;
+    line-height:100px;
+
+}
+#footer{
+    width:100%;
+    height:100px;/*temp*/
+    background:rgb(222,156,83);
+    float:left;
+    color:black;
+    text-align:center;
+    line-height:100px;
+}

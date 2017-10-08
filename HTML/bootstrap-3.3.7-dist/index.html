@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <!--引入样式-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> 
+<!--响应式显示页面
+    <meta name="viewport" content="width=device-width,initail-scale=1,maximum-scale=1,minimum-scale=1,suer-scalable=no">
+    -->
+    <style type="text/css">
+        body{
+            font-size:16px;
+        }
+        .test{
+            width:500px;
+            height:300px;
+            background: red;
+            font-size:1.5rem;
+        }
+        @media screen and (max-width: 900px) and (min-width: 500px){
+            .test{
+                width:100%;
+                height:300px;
+                background: green;
+            }
+        }
+        .test1{
+            height:20px;
+            background: green;
+        }
+        .glyphicon-asterisk{
+            color:green;
+            font-size:30px;
+        }
+       @font-face {
+            font-family: 'webfont';
+            src: url('fonts/webfont.eot'); /* IE9*/
+            src: url('fonts/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('fonts/webfont.woff') format('woff'), /* chrome、firefox */
+            url('fonts/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('fonts/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+        .web-font{
+            font-family:"webfont" !important;
+            font-size:16px;font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-stroke-width: 0.2px;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+    </style>
+}
+</head>
+<body>
+
+
+<!--排版，标题-->
+标题样式（默认）：
+<h1>标题一<small>小标题</small></h1>
+<h2>标题二</h2>
+<h3>标题三</h3>
+<h4>标题四</h4>
+<h5>标题五</h5>
+<h6>标题六</h6>
+<br>
+标题样式（bootstrap）：<br>
+<span class="h1">标题一</span>
+<span class="h2">标题二</span>
+<span class="h3">标题三</span>
+<span class="h4">标题四</span>
+<span class="h5">标题五</span>
+<span class="h6">标题六</span>
+
+<p><mark>我与父亲</mark><del>不相见</del><ins>已二年余了</ins>，<u>我最不能忘记的</u><small>是他的背影</small>。<strong>那年冬天</strong>，祖母死了，父亲的差使也交卸了，正是祸不单行的日子，我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼藉的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说，“事已如此，不必难过，好在天无绝人之路！”</p>
+
+<!--排版，对齐-->
+<p class="text-left">(左对齐)</p>
+<p class="text-center">（居中对齐）</p>
+<p class="text-right">（右对齐）</p>
+
+<!--排版，大小写-->
+<p class="text-lowercase">（小写：）HELLO WORLD!</p>
+<p class="text-uppercase">（大写：）hello world!</p>
+<p class="text-capitalize">（首字母大写：）hello world!</p>
+
+<!--表格-->
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>标题一</th>
+            <th>标题二</th>
+            <th>标题三</th>
+            <th>标题四</th>
+            <th>标题五</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+            <td>内容五</td>
+        </tr>
+         <tr class="active">
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+            <td>内容五</td>
+        </tr>
+         <tr class="success">
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+            <td>内容五</td>
+        </tr>
+         <tr class="info">
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+            <td>内容五</td>
+        </tr>
+         <tr class="warning">
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+            <td>内容五</td>
+        </tr>
+         <tr class="danger">
+            <td>内容一</td>
+            <td>内容二</td>
+            <td>内容三</td>
+            <td>内容四</td>
+            <td>内容五</td>
+        </tr>
+    </tbody>
+</table>
+<!--表单-->
+<form class="form-inline">
+    <div class="form-group has-success">
+        <label for="" class="control-label">这是一个输入框:</label>
+        <input type="text" name="" placeholder="提示信息" class="form-control input-lg">
+    </div>
+
+    <div class="form-group has-warning">
+        <label for="" class="control-label">这是一个输入框:</label>
+        <select class="form-control">
+            <option>北京</option>
+            <option>上海</option>
+            <option>广州</option>
+            <option>深圳</option>
+        </select>
+    </div>
+    
+    <div class="form-group has-error">
+        <label for="" class="control-label">这是一个输入框:</label>
+        <textarea class="form-control" cols="30" rows="10"></textarea>
+    </div>
+</form>
+
+按钮样式：<br>
+<button class="btn btn-default btn-lg">hello</button>
+<button class="btn btn-success btn-sm">hello</button>
+<button class="btn btn-primary active">hello</button>
+<button class="btn btn-info btn-block">hello</button>
+<button class="btn btn-warning" disabled="disabled" >hello</button>
+<button class="btn btn-danger">hello</button>
+<button class="btn btn-link">hello</button>
+<a href="" class="btn btn-danger">这是一个a标签</a>
+<br>
+<br>
+<img src="images/abc.jpg" class="img-thumbnail">
+<div class="test">测试一下这个句子的文字显示大小</div>
+<div class="test1 col-lg-4 col-md-6 col-sm-9 col-xs-12 col-lg-offset-3 col-md-offset-4"></div>
+<br>
+<!--图标-->
+<span class="glyphicon glyphicon-asterisk"></span><br>
+<i class="web-font">这个一句话，引用了线上字体库</i>
+<button class="btn btn-default"> 
+    <span class="glyphicon glyphicon-star"></span>这个是一个按钮
+</button>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        这个是按钮
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">百度</a></li>
+        <li><a href="#">百度</a></li>
+        <li><a href="#">百度</a></li>
+        <li><a href="#">百度</a></li>
+    </ul>
+
+</div>
+<div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control" name="">
+</div>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+</ul>
+<ul class="nav nav-pills">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+</ul>
+<ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+</ul>
+<ul class="pager">
+    <li class="previous"><a href="#">向左</a></li>
+    <li class="next"><a href="#">向右</a></li>
+</ul>
+<ul class="pagination">
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+</ul>
+<ul class="pagination pagination-lg">
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+</ul>
+<ul class="pagination pagination-sm">
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+</ul>
+<div class="progress">
+    <div class="progress-bar progress-bar-danger progress-bar-striped" style="width:60%">60%</div>
+</div>
+<ul class="list-group ">
+    <li class="list-group-item active">这是一个列表<span class="badge">14</span></li>
+    <li class="list-group-item disabled">这是一个列表<span class="badge">14</span></li>
+    <li class="list-group-item list-group-item-info">这是一个列表<span class="badge">14</span></li>
+</ul>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        弹出层
+    </div>
+    <div class="panel-body">
+        这里是面板的具体内容
+    </div>
+    <div class="panel-footer">脚注</div>
+</div>
+<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#showme">点击我试试</button>
+<div id="showme">这是测试的内容</div>
+</body> </html>

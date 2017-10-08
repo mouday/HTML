@@ -1,0 +1,69 @@
+<!doctype html>
+<meta charset="utf-8">
+<base target="_blank" href="http://www.baidu.com">
+<a href="index.html" >baidu.com</a><br>
+<div contenteditable spellcheck="true"> 这句话可以编辑</div>
+<ol reversed>
+    <li>第一句话
+    <li>第二句话
+    <li>第三句话
+    <li>第四句话
+</ol>
+<div>
+    <style scoped>
+        span{
+            color:green;
+            font-size:16px;
+        }
+    </style>
+    <span>
+        测试的文字，局部定义样式
+    </span>
+</div>
+<div>
+    <style scoped>
+        span{
+            color:red;
+            font-size:16px;
+        }
+    </style>
+    <span>
+        测试的文字，局部定义样式
+    </span>
+</div>
+
+这是一段话<mark>是吗</mark><br>
+这是一段话<mark>是吗</mark><br>
+这是一段话<mark>是吗</mark><br>
+这是一段话<mark>是吗</mark><br>
+这是一段话<mark>是吗</mark><br>
+lalalallalalallallalallalalallallalallalalallallalallalalallallalallalalallallalallalalallallalalla<wbr>lallal<br>
+<progress id="pro1" min="0" max="100" value="50"></progress>
+<meter low=40 high="80" optimum="100" id="pro" min=0 max=100 value=50></meter>
+<command></command>
+<details>
+<summary>想看美女点我</summary>
+    这是一句话<br>
+    这是一句话<br>
+    这是一句话<br>
+    这是一句话<br>
+    这是一句话<br>
+</details>
+
+<ruby>
+    妹子<rp>(</rp><rt>meizi</rt><rp>)</rp>
+</ruby>
+
+
+
+
+<script type="text/javascript">
+    var obj=document.getElementById("pro");
+    setInterval(function(){
+        if(obj.value<100){
+            obj.value=obj.value+1;
+        }else{
+            obj.value=0;
+        }
+        },100);
+</script>

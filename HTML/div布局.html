@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>div布局</title>
+    <style type="text/css">
+        .div1{
+            border:5px solid green;
+            width:500px !important;/*非ie识别*/
+            width:900px;/*500+5x2+10x2=530*/
+            height:100px;
+            margin:10px;
+            padding:10px;
+            /*
+            padding:10px;四边
+            padding:10px 20px;上下10，左右20
+            padding:10px 20px 30px;上10,左右20，下30
+            padding:10px 20px 30px 40px;上右下左
+            */
+        }
+        div span{
+            color:red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<!--声明一个盒子-->
+<div class="div1">这个一行字</div>
+<div>这个一行字</div>
+<div>这个一行字</div>
+<span>这是一行字</span>
+<span>这是一行字</span>
+<span>这是一行字</span>
+
+<div>
+    <span>姓名：</span>李白<br>
+    <span>年龄：</span>29<br>
+    <span>状态：</span>在线<br>
+
+</div>
+</body>
+</html>

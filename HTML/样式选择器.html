@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>样式选择器</title>
+    <style>
+        /*“*”代表所有*/
+        *{
+            font-size:1cm;
+            font-family:"宋体";
+        }
+        h1{
+            background: yellow;
+        }
+        p{
+            /*border:solid blue 5px;*/
+        }
+        /*id优先级，比html标签高*/
+        #one{
+            font-size:2cm;
+            color:red;
+        }
+        #two{
+             font-size:3cm;
+        }
+        p.ctwo{
+            color:green;
+        }
+        /*不写标签，代表所有的类名*/
+        .cone{
+            color:red;
+        }
+        .ctwo{
+            border:1px solid green;
+        }
+        .cthree{
+            background:pink;
+        }
+        div{color:red;}
+        p{color:green;}
+        div p{
+            color:yellow;
+        }
+        div,p,.cone,#ctwo{font-size:12px;}
+        /*伪选择器，css2中只有a和p*/
+        a{padding:5px;margin-bottom:10px;}
+        a:link{color:black;}
+        a:visited{color:red;}
+        a:hover{color:blue;background:green;}
+        a:active{color:yellow;}
+        a.anoe:link{color:yellow;text-decoration:none;}
+        a.aone:visited{color:grey;text-decoration:none;}
+        a.aone:hover{color:white;text-decoration:underline;}
+        p:first-line{color:red;}
+        p:first-letter{color:yellow;font-size:24px;}
+    </style>
+</head>
+<body>
+    <!--
+    四个通用属性：
+    id  name class style
+    在一个页面中，id不能相同，要唯一
+    -->
+    <h1>这是h1</h1>
+    <h3>这是h3</h3>
+    <a class="aone" href="#21">这是a标签</a><br>
+    <a class="atwo" href="#12">这是a标签</a><br>
+    <a href="#13">这是a标签</a><br>
+    <a href="#14">这是a标签</a><br>
+    <p>
+其一：【琴曲出自王实甫《西厢记》】<br>
+有美一人兮，见之不忘。<br>
+一日不见兮，思之如狂。<br>
+凤飞翱翔兮，四海求凰。<br>
+无奈佳人兮，不在东墙。<br>
+将琴代语兮，聊写衷肠。<br>
+何时见许兮，慰我彷徨。<br>
+愿言配德兮，携手相将。<br>
+不得於飞兮，使我沦亡。<br>
+</p>
+    <p></p>
+    <div>
+        <p>
+            这个是div里边的p
+        </p>
+    </div>
+    <div>这是单独的div</div>
+    <p>这是单独的p</p>
+    <div class="cone ctwo cthree">这是div</div>
+    <p id="one" class="ctwo">这是p</p>
+    <p id="two" class="ctwo">这是p</p>
+    <p class="cone">这是p</p>
+    <p class="cone">这是p</p>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML5表单实例</title>
+</head>
+<body>
+<form id="login"  action="login" method="get">
+    <!--novalidate取消表单验证-->
+</form>
+    下拉输入框：
+    <input form="login" list="listtest" autofocus autocomplete="off" placeholder="please input username" type="text" name="name">
+    <br>
+    <br>
+    搜索框：
+    <input form="login" type="search" name="ser">
+    <br>
+    <br>
+    电话框：
+    <input form="login" type="tel" name="telenum" title="必须是10个数字开头" pattern="^\d{10}$">
+    <!--pattern正则-->
+    <br>
+    <br>
+    网址框：
+    <input form="login" type="url" name="url">
+    <br>
+    <br>
+    邮箱：
+    <input form="login" type="email" name="email" required value="19@qq.com">
+    <br>
+    <br>
+    日期：
+    <br>
+    datetime<input form="login" type="datetime" name="datetime">
+    <br>
+    <br>
+    date<input form="login" type="date" name="date" value="2015-12-12">
+    <br>
+    <br>
+    month<input form="login" type="month" name="month" value="2015-12">
+    <br>
+    <br>
+    week<input form="login" type="week" name="week" value="2015-W12">
+    <br>
+    <br>
+    time:<input form="login" type="time" name="time" value="12:12">
+    <br>
+    <br>
+    datetime-local<input form="login" type="datetime-local" name="datetime-local" value="2015-12-12T12:12">
+    <br>
+    <br>
+    数字框<input form="login" type="number" name="" min="2" max="6" step="2">
+    <br>
+    <br>
+    range<input from="login" onchange="num.value=value" value="50" type="range" name="range" min="0" max="100" >
+    <output id="num">50</output>
+    <br>
+    <br>
+    color:<input type="color" name="color">
+    <br>
+    <br>
+    file:<input type="file" name="file" multiple accept="image/*">
+     <br>
+    <br>
+    <input form="login" formaction="one.php" formmethod="get" type="submit" name="dosubmit" value="删除">
+    <input form="login" formaction="two.php" formmethod="post" type="submit" name="dosubmit" value="通过">
+    <input form="login" formaction="three.php" type="submit" name="dosubmit" value="不通过">
+
+<datalist id="listtest">
+    <option>这个是1句话</option>
+    <option>这个是2句话</option>
+    <option>这个是3句话</option>
+    <option>这个是4句话</option>
+</datalist>
+</body>
+</html>

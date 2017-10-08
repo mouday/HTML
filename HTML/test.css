@@ -1,0 +1,7 @@
+/*直接写css语法即可*/
+@import url(demo.css);
+p{
+	font-family:"微软雅黑";
+	border:1px;
+	background:#CCCCCC;
+	};

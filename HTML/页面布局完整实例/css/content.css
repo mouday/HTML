@@ -1,0 +1,34 @@
+img{
+    border:0;
+    margin:0;
+    padding:0;
+}
+#logo img{
+    margin-top:20px !important;/*ie会忽略important，解决兼容性*/
+    margin-top:20px;
+    width:180px;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a{
+    font-size: 12px;
+    text-decoration: none;
+    color:#050;
+}
+#nav li{
+    width:100px;
+    height:30px;
+    float:left;
+    text-align:center;
+    line-height: 30px;
+}
+#nav .nt{
+    width:1px;
+    height:14px;
+    background: black;
+    overflow: hidden;
+    margin-top:8px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css基本语法</title>
+	<style type="text/css">
+	/*这里是内嵌样式表注释，只能使用css语法，不能使用html标签*/
+		
+		body{
+			/*background-image: url("abc.jpg");*/
+		}
+        /*@import:url("demo.css");*/
+	</style>
+    <link rel="stylesheet" type="text/css" href="test.css" >
+</head>
+<body>
+<!--
+有四个属性可以在html标签中使用：
+id
+name
+class
+style
+
+内联样式表：在html标记中使用style属性
+在style中使用样式属性
+
+嵌入样式表：使用<style>标记，将css嵌入到html
+
+外部样式表：在<head>中使用<link>标签，导入外部css文件
+
+输入样式表：将一个css文件导入到另一个css文件中import
+-->
+<h1 style="font-size:1cm;color:red;border:1px solid blue/*内联标签*/">黄鹤楼</h1>
+<p>【作者】崔颢 </p>
+<p>【朝代】唐</p>
+<p>昔人已乘黄鹤去，此地空余黄鹤楼。</p>
+<p>黄鹤一去不复返，白云千载空悠悠。</p>
+<p>晴川历历汉阳树，芳草萋萋鹦鹉洲。</p>
+<p>日暮乡关何处是？烟波江上使人愁。</p>
+</body>
+</html>

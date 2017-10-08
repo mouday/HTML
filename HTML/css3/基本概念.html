@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3选择器</title>
+    <style type="text/css">
+        /*多元选择器*/
+        div,p{
+            font-size:50px;
+        }
+        /*后代选择器*/
+        div p {            
+            color:green;
+        }
+        /*子代选择器*/
+        div>p{
+            background: red;
+        }
+        /*同级选择器*/
+        div~p{
+            background: yellow;
+        }
+        /*毗邻选择器*/
+        div+p{
+           font-size:2cm;
+        }
+        /*属性选择器*/
+        p[title]{
+            border:red solid 2px;
+        }       
+        /*属性多值选择器*/      
+        p[class~="two"]{
+            color:blue;
+        }
+        /*属性单值选择器*/
+        p[class="two"]{
+            color:white;
+        }
+        /*属性"值-"开头选择器*/
+        p[class|="c"]{
+            border:green solid 2px;
+        }
+        /*属性通配选择器*/
+        p[class*="ooxx"]{
+            background: green;
+        }
+        /*属性开头选择器*/
+        p[class^="ooxx"]{
+            background: red;
+        }
+        /*属性结尾选择器*/
+        p[class$="ooxx"]{
+            background: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+<p>明月几时有</p>
+<div>明月几时有</div>
+<div><span><p>明月几时有</p></span></div>
+<div><p>明月几时有</p></div>
+<p>明月几时有</p>
+<p>明月几时有</p>
+<p title="">明月几时有</p>
+<p title="">明月几时有</p>
+<p class="one two three">明月几时有</p>
+<p class="two">明月几时有</p>
+<p class="c-e">明月几时有</p>
+<p class="ooxxoo">明月几时有</p>
+<p class="xxooxxoo">明月几时有</p>
+<p class="xxooxx">明月几时有</p>
+
+</body>
+</html>
