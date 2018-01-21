@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+            background:#ff0022;
+        }
+
+        .one {
+            opacity: 1;
+            display: block;
+            font-weight: bold;
+            height:50px;
+            /* 参数说明：动画名称，持续时间，过渡类型 ，延迟时间 */
+            animation: meizi 10s ease-out 10s;
+        }
+            /* 定义动画 */
+        @keyframes meizi {
+            0% {transform: translate(0px)}
+            10% {transform: translate(20px)}
+            50% { transform: translate(30px)}
+            80% {transform: translate(50px)}
+            100% {transform: translate(100px)}
+        }
+        .two {
+            opacity: 1;
+            display: block;
+            font-weight: bold;
+            height:50px;
+            animation: meizi2 10s ease-out;
+        }
+        @keyframes meizi2 {
+            0% {transform: translate(0px)}
+            10% {transform: translate(20px)}
+            50% { transform: translate(30px)}
+            80% {transform: translate(50px)}
+            100% {transform: translate(100px)}
+        }
+    </style>
+</head>
+
+<body>
+    <span class="one">这是一段文字</span><br>
+    <span class="two">这是一段文字</span>
+    <div></div>
+</body>
+
+</html>

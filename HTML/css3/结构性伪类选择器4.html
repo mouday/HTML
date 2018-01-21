@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>结构性伪类选择器4</title>
+    <style type="text/css">
+        /*可用状态*/
+        [type="text"]:enabled{
+            background: green;
+        }
+        /*不可用状态*/
+        [type="text"]:disabled{
+            background: red;
+        }
+        /*选中状态*/
+        input:checked+span:after{
+            content:"我被选中了";
+        }
+        /*鼠标选中状态*/
+        ::selection{
+            color:white;
+            background:red;
+        };
+    </style>
+</head>
+<body>
+<p>选中会变色</p>
+<p>选中会变色</p>
+<p>选中会变色</p>
+<p>选中会变色</p>
+<input type="text" name="" value="aaaaaa"><br>
+<input type="text" name="" enabled="true" value="aaaaaa"><br>
+<input type="text" name="" disabled="true" value="aaaaaa"><br>
+<input type="radio" name=""  value="aaaaaa"><span>radio</span><br>
+<input type="radio" name=""  value="aaaaaa"><span>radio</span><br>
+<input type="text" name="" selection="true" value="aaaaaa"><br>
+<input type="checkbox" name="" value="aaaaaa"><span>checkbox</span><br>
+</body>
+</html>

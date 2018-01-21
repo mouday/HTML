@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>结构性伪类选择器</title>
+    <style type="text/css">
+        /*绑定根元素，html*/
+        :root{
+            background: yellow;
+        }
+        /*排除元素*/
+        p:not(.two){
+            color:red;
+        }
+        /*空元素*/
+        li:empty{
+            display:none;
+        }
+        /*目标元素*/
+        :target{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<p>我心安处是吾乡</p>
+<p class="two">我心安处是吾乡</p>
+<p>我心安处是吾乡</p>
+<ul>
+    <li>月是故乡明</li>
+    <li></li>
+    <li>月是故乡明</li>
+</ul>
+
+<a href="#one">one</a>
+<br>
+<a name="one">文章开始</a>
+<p>文章内容</p>
+
+</body>
+</html>

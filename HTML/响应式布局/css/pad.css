@@ -1,0 +1,15 @@
+h2{
+    color:#F0F;font-size:2.5em;
+}
+section#container{
+    width:600px;
+}
+#left{
+    width:160px;
+}
+section#main{
+    width:430px;
+}
+#right{
+    display:none;
+}

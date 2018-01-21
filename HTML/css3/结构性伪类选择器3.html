@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>结构性伪类选择器3</title>
+    <style type="text/css">
+        /*同类型的第5个，正序*/
+        p:nth-of-type(5){
+            background: green;
+        }
+        /*同类型的第4个，逆序*/
+        p:nth-last-of-type(4){
+            background: blue;
+        }
+        /*4开始，步长为3，循环选择*/
+        p:nth-child(3n+4){
+            background: red;
+        }
+        /*单独一个元素*/
+        p:only-child{
+            background: yellow;
+        }
+        /*单独一个类型元素*/
+        p:only-of-type{
+            background: #555;
+        }
+    </style>
+</head>
+<div>
+    <p>1、明月几时有</p>
+    <p>2、明月几时有</p>
+    <p>3、明月几时有</p>
+    <div>明月几时有</div>
+    <p>4、明月几时有</p>
+    <p>5、明月几时有</p>
+    <p>7、明月几时有</p>
+    <p>8、明月几时有</p>
+    <p>9、明月几时有</p>
+    <p>10、明月几时有</p>
+    <p>11、明月几时有</p>
+    <p>12、明月几时有</p>
+    <p>13、明月几时有</p>
+    <p>14、明月几时有</p>
+    <p>15、明月几时有</p>
+</div>
+<div>
+    <p>仅仅有一个子元素</p>
+</div>
+<div>
+    <p>有两个子元素</p>
+    <p>有两个子元素</p>
+</div>
+<div>
+    <p>有一个p元素</p>
+    <div>有一个div元素</div>
+</div>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>透明属性</title>
+    <style type="text/css">
+        textarea{
+            resize:vertical;/*允许垂直拉伸*/
+        }
+        div{
+            color:rgba(255,0,0,.5);
+            background:rgba(0,0,255,0.3);
+        }
+        p{
+            position: absolute;
+            top:30px;
+            left:500px;
+            width:20px;
+            height:500px;
+            background: red;
+            transform: rotate(190deg);
+        }
+    </style>
+</head>
+<body>
+<p></p>
+<div>这是一段文字</div>
+<textarea cols="50" rows="20"></textarea>
+</body>
+</html>

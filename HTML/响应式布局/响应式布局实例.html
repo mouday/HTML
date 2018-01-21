@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动设备需要加以下语句 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式布局实例（medias querys）</title>
+    <style>
+        body,h2 {margin: 0;padding: 0;color: white}
+
+        section#main,header,aside,footer {background: #333;margin: 5px 0;}
+
+        h2 {text-align: center;font-size: 3em;}
+        section#container{
+            width:960px;
+            margin:0 auto;
+        }
+        header{
+            float:left;
+            width:100%;
+            line-height:100px;
+        }
+        #left{
+            float:left;
+            width:200px;
+            line-height:400px;         
+        }
+        section#main{
+            float:left;
+            width:540px;
+            line-height:400px;
+            margin-left:10px;         
+        }
+        #right{
+            float:right;
+            width:200px;
+            line-height:400px;
+            margin-left:10px;         
+        }
+        footer{
+            float:left;
+            width:100%;
+            line-height:80px;
+        }
+        /* 内部css嵌套使用媒体查询 */
+        /* 1000px以上屏幕如何显示 */
+        @media screen and (min-width:1000px)
+        {
+           
+        }
+        /* pad 640-1000px */
+        @media screen and (min-width:640px) and (max-width:1000px){
+          
+        }
+        /* phone 640px */
+        @media screen and (max-width:639px){
+            
+        }
+    </style>
+    <!-- 外部引用媒体查询，推荐使用 -->
+    <link rel="stylesheet" media="screen and (min-width:1000px)" href="css/pc.css">
+    <link rel="stylesheet" media="screen and (min-width:640px) and (max-width:1000px)" href="css/pad.css" >
+    <link rel="stylesheet" media="screen and (max-width:639px)" href="css/phone.css">
+</head>
+
+<body>
+    <section id="container">
+        <header>
+            <h2>Header</h2>
+        </header>
+        <aside id="left">
+            <h2>Left</h2>
+        </aside>
+        <section id="main">
+            <h2>Main</h2>
+        </section>
+        <aside id="right">
+            <h2>Right</h2>
+        </aside>
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+    </section>
+</body>
+
+</html>

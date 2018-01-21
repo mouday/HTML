@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>边框图片</title>
+    <style type="text/css">
+        div{
+            width:300px;
+            height:100px;
+            border:15px solid transparent;
+            padding:10px 20px;
+        }
+        
+        .round{
+            /*图片  位置   重复
+            border:2px solid green;*/
+            border-image:url(images/border.png) 30/30px round;  
+        }
+        .stretch{
+            border-image:url(images/border.png) 30/30px stretch;  
+        }
+        .bor{
+            border-image:url(images/border-1.png) 5/5px;
+        }
+    </style>
+</head>
+<body>
+<div class="round">在这里，图片铺满整个边框。</div>
+<div class="stretch">在这里，图片被拉伸以填充该区域。</div>
+<div class="bor">这个是自己设计的图片</div>
+</body>
+</html>
+

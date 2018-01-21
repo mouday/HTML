@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>边框属性</title>
+    <style type="text/css">
+        .one{
+            width:200px;
+            height:200px;
+            border-top-left-radius:50px 50px;
+            border:2px solid blue;
+        }
+        .two{
+            width:200px;
+            height:200px;
+            border-radius:50px;
+            border:2px solid blue;
+        }
+        .three{
+            width:200px;
+            height:200px;
+            border-radius:50px 100px;
+            border:2px solid blue;
+        }
+        .four{
+            width:200px;
+            height:200px;
+            border-radius:50px 100px 200px;
+            border:2px solid blue;
+        }
+        .five{
+            width:200px;
+            height:200px;
+            border-radius:50px 100px 200px 300px;
+            border:2px solid blue;
+        }
+        .six{
+            width:200px;
+            height:200px;
+            border-radius:100px;
+            border:2px solid blue;
+        }
+        .seven{
+            width:200px;
+            height:200px;
+            border-radius:30px 60px 90px 120px/120px 90px 60px 30px;
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body>
+<p>指定顶左值</p>
+<div class="one"></div>
+<p>指定一个值</p>
+<div class="two"></div>
+<p>指定两个值</p>
+<div class="three"></div>
+<p>指定三个值</p>
+<div class="four"></div>
+<p>指定四个值</p>
+<div class="five"></div>
+<p>指定一个值（正方形边长一半）</p>
+<div class="six"></div>
+<p>指定8个值，长短轴</p>
+<div class="seven"></div>
+</body>
+</html>

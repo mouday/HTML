@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>伪类选择器</title>
+    <style type="text/css">
+        /*第一行*/
+        p:first-line{
+            color:green;
+            font-size:1cm;
+        }
+        /*第一个字*/
+        p:first-letter{
+            font-size:3cm;
+        }
+        /*标签之前*/
+        p:before{
+            content:"《唐诗三百首》";
+        }
+        /*标签之后*/
+        p:after{
+            content:"测试一下";
+        }
+    </style>
+</head>
+<body>
+<p>
+江雪<br>
+唐代：柳宗元<br>
+千山鸟飞绝，万径人踪灭。<br>
+孤舟蓑笠翁，独钓寒江雪。<br>
+</p>
+</body>
+</html>
