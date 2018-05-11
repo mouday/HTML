@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按要求新增元素</title>
+</head>
+<body>
+    <h1>按要求新增元素</h1>
+</body>
+<script>
+/**
+* 新增 ul 元素及 100 个 li
+* 禁止使用 innerHTML
+*/
+
+var ul=document.createElement("ul");
+document.body.appendChild(ul);
+
+for(var i=1;i<101;i++){
+    var li=document.createElement("li");
+    var liText=document.createTextNode(i);
+    li.appendChild(liText);
+    ul.appendChild(li);
+}
+
+</script>
+</html>

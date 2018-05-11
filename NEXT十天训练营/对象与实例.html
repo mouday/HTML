@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 构造函数,首字母大写
+    function Bottle(name,price, isKeepWarm){
+        this.name=name;
+        this.price=price;
+        this.isKeepWarm=isKeepWarm;
+
+        this.sayHello=function(){
+            document.write("hello!");
+        }
+    }
+    
+    // 实例化
+    var bottle1=new Bottle("太空杯",23,false);
+    var bottle2=new Bottle("保温杯",24,true);
+    var bottle3=Bottle("保温杯",24,true);
+
+    // 输出
+    document.write(bottle1 instanceof Bottle,"<br>");
+    document.write(bottle2 instanceof Bottle,"<br>");
+    document.write(bottle3 instanceof Bottle,"<br>");
+    bottle1.sayHello();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

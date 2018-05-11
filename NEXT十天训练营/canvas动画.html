@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="300px" height="300px" style="border:2px solid #333"></canvas>
+    <script>
+        // 获取画布元素
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        // 设置坐标
+        var monster = {
+            x: 30,
+            y: 50,
+            size: 60
+        }
+
+        // 获取图片
+        var image = new Image();
+        image.src = "images/plane.png";
+        image.onload = function () {
+            context.drawImage(image, monster.x, monster.y, monster.size, monster.size);
+            animate();
+        };
+
+
+        // 动画效果
+        function animate() {
+            if (monster.x > 200) {
+                monster.x = 0;
+            }
+            monster.x += 5;
+            // 清屏
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            // 绘制
+            context.drawImage(image, monster.x, monster.y, monster.size, monster.size);
+            requestAnimationFrame(animate);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

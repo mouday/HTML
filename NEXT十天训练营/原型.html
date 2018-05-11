@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+/*Prototype原型是函数的一个属性，一个对象
+* 题目:
+* 使用 Prototype 来创建一个 Person 类， 需要完成以下要求：
+* 1、在构造函数 Person 的 prototype(原型) 上增加下面的共享属性：
+*   1.1、在原型上增加属性 `name` 值为 'Jonny'
+*   1.2、在原型上增加属性 `friends` 值为 ['Cover', 'Kevin']
+* 2、在构造函数 Person 的原型上增加共享方法 sayHello
+*/
+function Person(name){
+}
+
+// 设置原型
+Person.prototype = {
+    constructor: Person,
+    name: 'Jonny',
+    friends: ['Cover', 'Kevin'],
+    sayHello: function() {
+    //...
+  }
+};
+
+
+/*
+需注意的是在上面的代码中，我们将 Person.prototype 设置为一个新创建的对象。
+会导致 Person.prototype 对象原来的 constructor 属性不再指向 Person, 
+这里可以像上面那样，特意的把 constructor 设置为 Person 。
+*/
+        var person1=new Person();
+        var person2=new Person("Sugar");
+        var person3=new Person("Cream");
+        document.write(person1.name,"<br>");
+        document.write(person2.name,"<br>");
+        document.write(person3.name,"<br>");
+        document.write(person1.friends,"<br>");
+        person1.sayHello();
+    </script>
+
+    
+</head>
+<body>
+    
+</body>
+</html>

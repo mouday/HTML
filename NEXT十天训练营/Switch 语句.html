@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<p id="day"></p>
+<script>
+    // 使用switch语句
+    var x = "";
+    var day = new Date().getDay();
+    switch (day) {
+        case 0:
+            x = "today is Sunday";
+            break;
+        case 1:
+            x = "today is Monday";
+            break;
+        case 2:
+            x = "today is Tuesday";
+            break;
+        case 3:
+            x = "today is Wednesday";
+            break;
+        case 4:
+            x = "today is Thursday";
+            break;
+        case 5:
+            x = "today is Friday";
+            break;
+        case 6:
+            x = "today is Saturday";
+            break;
+        default:
+            x="default";
+    }
+    document.getElementById("day").innerHTML = x;
+</script>
+
+<body>
+
+</body>
+
+</html>

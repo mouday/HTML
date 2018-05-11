@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>帧动画——animation</title>
+    <style type="text/css">
+        html {
+            background: #f5f5f5;
+        }
+
+        .box {
+            width: 600px;
+            height: 200px;
+            border: 1px solid #ccc;
+            background: #fff;
+            margin: 20px auto;
+        }
+
+        @keyframes circleRun {
+            33% {
+                transform: translate(150px, 75px);
+            }
+            66% {
+                transform: translate(400px, -75px)
+            }
+            to {
+                transform: translate(550px, 0);
+                background: red;
+            }
+        }
+
+        @keyframes circleRun2 {
+            from {
+                transform: translate(0, 75px);
+            }
+            33% {
+                transform: translate(150px, 75px);
+            }
+            66% {
+                transform: translate(400px, -75px)
+            }
+            to {
+                transform: translate(550px, 0);
+                background: red;
+            }
+        }
+
+        .circle, .circle2 {
+            width: 50px;
+            height: 50px;
+            background: blue;
+            border-radius: 50%;
+            margin-top: 75px;
+            /*animation: circleRun 2s ease infinite;*/
+            animation-name: circleRun;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            animation-play-state: running;
+        }
+
+        .circle2 {
+            animation-name: circleRun2;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="circle"></div>
+    </div>
+
+
+    <div class="box">
+        <div class="circle2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>制作表情包</title>
+    <style>
+    canvas{       
+        /* background: #999; */
+        border:2px solid #999;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="300px" height="300px"></canvas>
+    <script>
+   
+    // 获取canvas元素
+    var canvas=document.getElementById("canvas");
+    var context=canvas.getContext("2d");
+
+    // 指定图片
+    var image=new Image();
+    image.src="images/canvas-expression-base.png";//图片是异步加载
+    // context.fillRect(10,10,50,50);
+    image.onload=function(){
+        // 加载图像
+        context.drawImage(image,50,110,200,200);
+        // 增加文字
+        context.font='30px arial';
+        context.fillText("今天的我",20,50);
+        context.font= '40px arial';
+        context.fillText("还是一样的帅！",20,90);
+    }
+    
+    </script>
+</body>
+</html>

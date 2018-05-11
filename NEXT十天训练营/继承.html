@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    // 概念：原型链
+    // 父类，飞机
+    function Plane(color){
+        this.color=color;
+    }
+    Plane.prototype.fly=function(){
+        document.write("fly<br>");
+    }
+
+    // 子类构造函数，战斗机
+    function Fighter(){
+        this.bullets=[];
+    }
+
+    Fighter.prototype=new Plane("blue");
+
+    // 特有方法
+    Fighter.prototype.shoot=function(){
+        document.write("biu biu biu <br>");
+    }
+
+    // 实例化
+    var fighter =new Fighter();
+    document.write(fighter.color,"<br>");
+    fighter.shoot();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    canvas{
+        background: rgb(173, 171, 171);
+    }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+    var canvas=document.getElementById("canvas");
+    var context=canvas.getContext("2d");//获取2d渲染
+    context.fillRect(10,10,50,50);//实行矩形
+    context.strokeRect(100,100,50,50)//空心矩形
+    
+    var image=new Image();
+    image.src="images/plane.png";
+    image.onload=function(){
+         context.drawImage(image,300,300);
+         context.drawImage(image,400,300,60,100);
+        
+    };
+    // 清除画布内容
+   context.clearRect(0,0,canvas.width,canvas.height);
+    </script>
+</body>
+</html>

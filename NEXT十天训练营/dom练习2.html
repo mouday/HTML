@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>按要求新增元素</title>
+</head>
+<body>
+    <h1>按要求新增元素</h1>
+</body>
+<script>
+    
+    var body = document.body;
+    var len = 100;
+    var i = 0;
+    //创建一个buffer
+    var flagment = document.createDocumentFragment(); // 使用 fragment 来提高性能
+    var ul = document.createElement('ul');
+    var li;
+    var textNode;
+    
+    body.appendChild(ul);
+    
+    for (; i < len; i++) {
+        li = document.createElement('li');
+        textNode = document.createTextNode(i + 1);
+        li.appendChild(textNode);
+    
+        flagment.appendChild(li);
+    }
+    
+    ul.appendChild(flagment);
+    </script>
+</html>
+
+

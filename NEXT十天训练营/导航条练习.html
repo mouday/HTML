@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+/*
+* 题目要求：
+* 1、已知导航栏背景颜色为#333、边框圆角为10px。
+* 2、导航选项内边距为20px、选项字体颜色为白色、 选项行高为40px。
+*/
+.link-list {
+    padding-left: 10px;
+    /* 设置导航栏背景颜色为#333、边框圆角为10px */
+    background-color:#333;
+    border-radius:10px;
+}
+
+.link-list .link-item {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    /* 设置导航栏选项左右内边距为20px、选项字体颜色为白色、 选项行高为40px */
+    padding:0 20px;
+    color:white;
+    line-height:40px;
+    
+}
+
+/* 当鼠标滑过时，item的背景颜色会变成蓝色 */
+.link-list .link-item:hover {
+    background-color: #188eee;
+}
+    </style>
+</head>
+<body>
+    <nav class="link-list">
+        <a class="link-item" href="#">首页</a>
+        <a class="link-item" href="#">博客</a>
+        <a class="link-item" href="#">关于</a>
+        <a class="link-item" href="#">联系</a>
+        <a class="link-item" href="#">登陆</a>
+
+    </nav>
+    <h1>断章</h1>
+<p>你站在桥上看风景，
+    <br> 看风景的人在楼上看你。
+</p>
+
+<p>明月装饰了你的窗子，
+    <br> 你装饰了别人的梦。
+</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>编写一个事件监听器</title>
+    <style>
+      #target {
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <!-- 请在index.js文件中完成练习	-->
+    <p id="target">点击文本，改变文字颜色为红色</p>
+</body>
+<script>
+    /*
+ * 设置一个事件监听器，需要完成以下要求：
+ * 1、触发事件的目标元素为 #target
+ * 2、监听的是一个 click 事件
+ * 3、当事件触发时，设置文字颜色为 red
+ */
+ // 获取目标元素
+var target = document.getElementById('target');
+// 绑定事件
+target.addEventListener('click', function() {
+    this.style.color = 'red';
+}, false);
+</script>
+</html>
+
